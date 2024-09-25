@@ -23,7 +23,7 @@ function Step1() {
       },
     });
 
-    router.replace("/code1"); // Navigate to Step 2 on success
+    router.replace("/2"); // Navigate to Step 2 on success
   };
 
   return (
@@ -46,7 +46,7 @@ function Step1() {
               setFormData({ ...formData, full_name: e.target.value })
             }
             placeholder="الاسم الكامل"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -59,7 +59,7 @@ function Step1() {
               setFormData({ ...formData, phone_number: e.target.value })
             }
             placeholder="رقم الهاتف"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -72,7 +72,7 @@ function Step1() {
               setFormData({ ...formData, id_number: e.target.value })
             }
             placeholder="رقم الهوية"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="w-full flex justify-center">

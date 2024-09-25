@@ -22,7 +22,7 @@ function Step2() {
       data: formData, // Submit all form data
     });
 
-    router.replace("/code2"); // Navigate to Step 2 on success
+    router.replace("/3"); // Navigate to Step 2 on success
   };
 
   return (
@@ -45,7 +45,7 @@ function Step2() {
               setFormData({ ...formData, brand: e.target.value })
             }
             placeholder="العلامة التجارية"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -58,7 +58,7 @@ function Step2() {
               setFormData({ ...formData, category: e.target.value })
             }
             placeholder="الفئة"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -71,7 +71,7 @@ function Step2() {
               setFormData({ ...formData, carModel: e.target.value })
             }
             placeholder="موديل السيارة"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -84,7 +84,7 @@ function Step2() {
               setFormData({ ...formData, exteriorColor: e.target.value })
             }
             placeholder="اللون الخارجي"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -97,7 +97,7 @@ function Step2() {
               setFormData({ ...formData, chassisNumber: e.target.value })
             }
             placeholder="رقم الشاصي"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -110,7 +110,7 @@ function Step2() {
               setFormData({ ...formData, reservationValue: e.target.value })
             }
             placeholder="قيمة الحجز"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="w-full flex justify-center">

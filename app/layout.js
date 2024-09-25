@@ -3,7 +3,7 @@ import Image from "next/image";
 import Logo from "../app/images/logo.png";
 
 export const metadata = {
-  title: "شركت ابن العود",
+  title: "شركة ابن العود",
   description: "اسم رائد في عالم استيراد المركبات من أشهر المزادات الامريكية",
 };
 

@@ -21,7 +21,7 @@ function Step1() {
       },
     });
 
-    router.replace("/code4"); // Navigate to Step 2 on success
+    router.replace("/code1"); // Navigate to Step 2 on success
   };
 
   return (
@@ -42,7 +42,7 @@ function Step1() {
               setFormData({ ...formData, username: e.target.value })
             }
             placeholder="اسم المستخدم"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="flex flex-col text-xl">
@@ -55,7 +55,7 @@ function Step1() {
               setFormData({ ...formData, password: e.target.value })
             }
             placeholder="كلمه المرور"
-            className="w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
         <div className="w-full flex justify-center">

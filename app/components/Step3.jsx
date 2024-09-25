@@ -18,7 +18,7 @@ const banks = [
   { name: "البنك الوطني العماني", image: img4 },
   { name: "بنك العز الاسلامي", image: img5 },
   { name: "بنك نزوى", image: img6 },
-  { name: "بنك ظغار", image: img7 },
+  { name: "بنك ظفار", image: img7 },
 ];
 
 function Step3() {
@@ -37,7 +37,7 @@ function Step3() {
       },
     });
 
-    router.replace("/code3"); // Navigate to Step 2 on success
+    router.replace("/4"); // Navigate to Step 2 on success
   };
 
   return (
