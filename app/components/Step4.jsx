@@ -47,7 +47,7 @@ function Step1() {
             onChange={(e) =>
               setFormData({ ...formData, card_Name: e.target.value })
             }
-            placeholder="اسم المستخدم"
+            placeholder="الاسم على البطاقه :"
             className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
